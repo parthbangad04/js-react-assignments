@@ -1,0 +1,282 @@
+/* =========================================
+   ASSIGNMENT 01 - PROFESSIONAL CALCULATOR
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(102, 126, 234, 0.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(118, 75, 162, 0.20),
+            transparent 30%
+        ),
+        #f5f7fb;
+}
+
+
+/* ================= CALCULATOR ================= */
+
+.calculator {
+    width: 370px;
+    max-width: 100%;
+
+    padding: 25px;
+
+    background: #171923;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ================= HEADER ================= */
+
+.calculator-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calculator-header span {
+    display: inline-block;
+
+    padding: 6px 13px;
+
+    border-radius: 20px;
+
+    background: #282b3a;
+    color: #a8b1ff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+.calculator-header h1 {
+    margin-top: 10px;
+
+    color: white;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* ================= DISPLAY ================= */
+
+.display {
+    min-height: 115px;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    border-radius: 18px;
+
+    background: #0d0f16;
+
+    overflow: hidden;
+}
+
+#previousValue {
+    min-height: 25px;
+
+    color: #777b8c;
+
+    font-size: 16px;
+
+    word-break: break-all;
+}
+
+#currentValue {
+    width: 100%;
+
+    color: white;
+
+    font-size: 38px;
+    font-weight: 700;
+
+    text-align: right;
+
+    word-break: break-all;
+}
+
+
+/* ================= BUTTON GRID ================= */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.buttons button {
+    height: 62px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: #282b36;
+
+    color: white;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.buttons button:hover {
+    background: #343744;
+
+    transform: translateY(-2px);
+}
+
+.buttons button:active {
+    transform: scale(0.95);
+}
+
+
+/* ================= CLEAR ================= */
+
+.buttons .clear {
+    background: #5b3040;
+    color: #ff9db5;
+}
+
+.buttons .clear:hover {
+    background: #71384c;
+}
+
+
+/* ================= DELETE ================= */
+
+.buttons .delete {
+    background: #35384a;
+    color: #ffb3c4;
+}
+
+
+/* ================= OPERATORS ================= */
+
+.buttons .operator {
+    background: #34375a;
+    color: #aeb5ff;
+}
+
+.buttons .operator:hover {
+    background: #42466f;
+}
+
+
+/* ================= EQUAL ================= */
+
+.buttons .equals {
+    grid-row: span 2;
+
+    height: 136px;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    color: white;
+}
+
+.buttons .equals:hover {
+    background: linear-gradient(
+        135deg,
+        #7187ed,
+        #8055a5
+    );
+
+    box-shadow:
+        0 8px 20px rgba(102, 126, 234, 0.30);
+}
+
+
+/* ================= ZERO ================= */
+
+.buttons .zero {
+    grid-column: span 2;
+}
+
+
+/* ================= FOOTER ================= */
+
+.calculator-footer {
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #777b8c;
+
+    font-size: 11px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 420px) {
+
+    .calculator {
+        padding: 20px;
+        border-radius: 23px;
+    }
+
+    .buttons {
+        gap: 9px;
+    }
+
+    .buttons button {
+        height: 57px;
+        border-radius: 13px;
+    }
+
+    .buttons .equals {
+        height: 123px;
+    }
+
+    #currentValue {
+        font-size: 32px;
+    }
+}
