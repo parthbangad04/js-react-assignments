@@ -1,0 +1,244 @@
+/* =========================================
+   ASSIGNMENT 6 - REACT COUNTER
+   ========================================= */
+
+.counter-page {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 30px 20px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(102, 126, 234, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(118, 75, 162, 0.18),
+      transparent 30%
+    ),
+    #f5f7fb;
+}
+
+
+/* =========================================
+   COUNTER CARD
+   ========================================= */
+
+.counter-card {
+  width: 100%;
+
+  max-width: 430px;
+
+  padding: 40px;
+
+  text-align: center;
+
+  background: white;
+
+  border-radius: 24px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   BADGE
+   ========================================= */
+
+.counter-badge {
+  display: inline-block;
+
+  padding: 7px 15px;
+
+  border-radius: 20px;
+
+  background: #eee9ff;
+
+  color: #6842d8;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+}
+
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.counter-card h1 {
+  margin: 15px 0 8px;
+
+  color: #111827;
+
+  font-size: 32px;
+}
+
+.counter-description {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   COUNTER DISPLAY
+   ========================================= */
+
+.counter-display {
+  margin: 30px auto;
+
+  width: 170px;
+
+  height: 130px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2
+  );
+
+  color: white;
+
+  font-size: 55px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 12px 30px rgba(102, 126, 234, 0.30);
+}
+
+
+/* =========================================
+   + AND - BUTTONS
+   ========================================= */
+
+.counter-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+}
+
+.counter-buttons button {
+  width: 65px;
+
+  height: 55px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  color: white;
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.increment-button {
+  background: #667eea;
+}
+
+.decrement-button {
+  background: #764ba2;
+}
+
+.counter-buttons button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.counter-buttons button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   RESET BUTTON
+   ========================================= */
+
+.reset-button {
+  width: 145px;
+
+  margin-top: 25px;
+
+  padding: 11px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 10px;
+
+  background: white;
+
+  color: #374151;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.reset-button:hover {
+  background: #f3f4f6;
+
+  border-color: #9ca3af;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+  .counter-card {
+    padding: 30px 20px;
+  }
+
+  .counter-card h1 {
+    font-size: 27px;
+  }
+
+  .counter-display {
+    width: 150px;
+    height: 115px;
+
+    font-size: 48px;
+  }
+}
